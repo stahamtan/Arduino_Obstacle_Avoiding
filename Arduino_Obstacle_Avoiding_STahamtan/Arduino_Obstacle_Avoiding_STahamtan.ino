@@ -77,7 +77,7 @@ void drive (int spdA, int directionA, int spdB, int directionB){
 }
 
 void makeTurn() {     // Check left and right distances, and make a turn to the side where there is more room!
-  if (distanceL > distanceR) {
+  if (distanceL >= distanceR) {
     Serial.println("Turning LEFT..........!!!!");
     drive(rightMotorDefaultSpeed, forward, leftMotorDefaultSpeed, backward);
     delay(300);
